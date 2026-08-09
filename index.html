@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deery_Yz</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+<div id="registroVisitante" class="registro-visitante">
+    <div class="registro-contenido">
+        <button id="cerrarRegistro" class="cerrar-registro" aria-label="Cerrar">&times;</button>
+
+        <p class="registro-etiqueta">Bienvenido a Deery_Yz</p>
+        <h2>¿Quién está visitando mi página?</h2>
+
+        <p class="registro-texto">
+            Si deseas, puedes dejarme unos datos básicos para registrar tu visita.
+        </p>
+
+        <form
+            id="formRegistroVisitante"
+            action="https://formspree.io/f/mdenkddp"
+            method="POST"
+        >
+            <div class="registro-grid">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="text" name="apellido" placeholder="Apellido" required>
+                <input type="text" name="pais" placeholder="País" required>
+                <input type="text" name="ciudad" placeholder="Ciudad" required>
+            </div>
+
+            <input type="hidden" name="tipo_formulario" value="Registro de visitante">
+
+            <button type="submit" class="boton-registro">
+                Registrar mi visita
+            </button>
+
+            <button type="button" id="omitirRegistro" class="boton-omitir">
+                Continuar sin registrarme
+            </button>
+        </form>
+    </div>
+</div>
+<div id="notificacionVisita" class="notificacion-visita">
+    <div class="notificacion-icono">
+        <i class="fa-solid fa-check"></i>
+    </div>
+
+    <div>
+        <strong>¡Visita registrada!</strong>
+        <p>Gracias por visitar Deery_Yz 👋</p>
+    </div>
+</div>
+    <header class="encabezado">
+        <a href="#inicio" class="logo">Deery_<span>Yz</span></a>
+<div class="menu-hamburguesa" id="menuHamburguesa">
+    <i class="fa-solid fa-bars"></i>
+</div>
+        <nav class="menu">
+            <a href="#logros">Logros</a>
+            <a href="#trayectoria">Trayectoria</a>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#pasiones">Pasiones</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <a href="#contacto" class="boton-menu">Contactarme</a>
+       <button id="botonTema" class="boton-tema" aria-label="Cambiar tema">
+    <i class="fa-solid fa-sun"></i>
+</button> 
+    </header>
+
+    <main>
+<section id="inicio" class="portada">
+    <div class="fondo-particulas" id="fondoParticulas"></div>
+     <div class="efecto-fondo efecto-uno"></div>
+<div class="efecto-fondo efecto-dos"></div>
+<div class="rejilla-tecnologica"></div>
+
+            <div class="contenido-portada">
+
+                <p class="mensaje-pequeno">
+                     Tecnología, creatividad y crecimiento
+                </p>
+
+                <h1>
+                    Hola, soy
+                    <span>Deery Encarnación</span>
+                </h1>
+
+                <h2>
+                    Estudiante de Ingeniería en Telemática
+                </h2>
+
+                <p class="descripcion">
+    Construyendo mi camino entre tecnología, desarrollo y creatividad,
+    transformando ideas en soluciones mientras sigo creciendo
+    personal y profesionalmente.
+</p>
+                </p>
+
+                <div class="botones-portada">
+                    <a href="#proyectos" class="boton-principal">
+                        Ver proyectos
+                    </a>
+<button id="abrirHistoria" class="boton-secundario">
+    Conocer más
+</button>
+                </div>
+
+              <div class="redes-portada">
+
+    <a href="https://www.tiktok.com/@deeryencarnacion?_r=1&_t=ZS-98eIZLaDatx" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+
+    <a href="https://www.instagram.com/deery_encarnacion?igsh=MmpiYzM0bHc2NWo%3D&utm_source=qr" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/share/1Bin85ULEK/?mibextid=wwXIfr" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+
+</div>
+
+            </div>
+
+            <div class="imagen-portada">
+                <div class="marco-imagen">
+                    <img src="imagenes/portada.jpg" alt="Imagen principal de Deery_Yz">
+                </div>
+            </div>
+
+        </section>
+        <!-- VENTANA: CONOCE MÁS DE MÍ -->
+<div class="modal-historia" id="modalHistoria">
+    <div class="modal-historia-contenido">
+
+        <button class="cerrar-historia" id="cerrarHistoria" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="historia-encabezado">
+            <span>Mi historia</span>
+            <h2>Conoce un poco más de mí</h2>
+            <p>
+                Detrás de mis proyectos y de la tecnología también existe una historia,
+                una familia, sueños y un camino que todavía estoy construyendo.
+            </p>
+        </div>
+
+        <div class="historia-bloque">
+            <h3>🌱 Mis raíces</h3>
+<div class="historia-fila">
+    <div class="historia-texto">
+        <p>
+            Soy de <strong>Huaquillas</strong> y crecí en una familia humilde, rodeado de mis tíos, tías, primos, primas, mi hermana y mis abuelos paternos. Desde los 5 o 6 años me encantaba acompañar a mi abuelo a su finca ganadera.
+        </p>
+    </div>
+
+    <div class="historia-foto">
+        <img src="imagenes/infancia-caballo.png" alt="Recuerdo de mi infancia en la finca">
+    </div>
+</div>
+
+<div class="historia-fila historia-fila-inversa">
+    <div class="historia-texto">
+        <p>
+            Mientras la escuela no era precisamente mi lugar favorito 😅, ir al campo con mi abuelo era todo lo contrario. Me encantaba acompañarlo, participar en las diferentes actividades de la finca y aprender de todo un poco. Es una parte de mi vida que sigo disfrutando hasta el día de hoy.
+        </p>
+    </div>
+
+    <div class="historia-foto">
+        <img src="imagenes/abuelo-finca.png" alt="Mi abuelo contemplando la finca">
+    </div>
+</div>
+
+<p>
+    Mi abuela también ocupa un lugar muy especial en mi vida. Y si hay algo que siempre voy a destacar de ella es su sazón. Para mí, todo lo que cocina le queda perfecto. Son cosas sencillas, pero representan mucho de mis raíces, de dónde vengo y de la familia con la que crecí.
+</p>
+        </div>
+
+        <div class="historia-bloque">
+            <h3>🛤️ Cuando los planes cambiaron</h3>
+<div class="historia-fila">
+    <div class="historia-texto">
+        <p>
+            Cuando fui creciendo tuve durante mucho tiempo una idea bastante clara:
+            <strong>quería ser policía o militar.</strong>
+        </p>
+    </div>
+
+   <div class="historia-foto foto-policia">
+        <img src="imagenes/infancia-policia.png" alt="Recuerdo de mi infancia vestido de policía">
+    </div>
+</div>
+
+            <p>
+                Al terminar el colegio, mi prioridad fue ingresar a la Policía.
+                Lo intenté en varias ocasiones y me preparé bastante, tanto física
+                como mentalmente, pero finalmente no pude ingresar. Después decidí
+                intentarlo en las Fuerzas Armadas, pero por motivos de salud tampoco
+                pude continuar ese camino.
+            </p>
+
+            <p>
+                Fue una etapa difícil para mí. Había dedicado mucho tiempo y esfuerzo
+                a algo que realmente quería y, cuando no resultó, me desanimé bastante.
+            </p>
+
+            <p>
+                La universidad tampoco estaba entre mis planes. Nunca fui una persona
+                demasiado apegada a los estudios; siempre he sido más inquieto, curioso
+                y de aprender haciendo. Así que durante un tiempo pensé que, si no había
+                podido ser policía ni militar, simplemente me dedicaría a trabajar.
+            </p>
+
+            <p>
+                En vacaciones siempre buscaba algún tipo de trabajo. Y si aparecía algo
+                que no sabía hacer, intentaba aprenderlo rápidamente.
+            </p>
+
+            <p>
+                Sin darme cuenta, el tiempo comenzó a pasar. La situación laboral en
+                Huaquillas tampoco era sencilla y llegó un momento en el que entendí
+                que necesitaba buscar un nuevo camino.
+            </p>
+        </div>
+
+        <div class="historia-bloque">
+            <h3>💻 Un rumbo que no esperaba</h3>
+<div class="historia-fila">
+    <div class="historia-texto">
+            <p>
+                Mi primera idea ni siquiera fue entrar a una universidad. Pensé estudiar
+                algo relacionado con <strong>redes y telecomunicaciones</strong> durante
+                un par de años en Huaquillas.
+            </p>
+
+            <p>
+                Pero empecé a investigar. Mientras más buscaba, más opciones encontraba,
+                hasta que finalmente descubrí una carrera que hasta ese momento
+                prácticamente desconocía: <strong>Ingeniería en Telemática.</strong>
+            </p>
+  
+            <p>
+                No sabía cómo inscribirme en una universidad, qué tenía que hacer ni
+                hacia dónde debía ir. Con la ayuda de una amiga pude orientarme y
+                finalmente, en 2025, con 21 años, comencé esta nueva etapa.
+            </p>
+  </div>
+
+    <div class="historia-foto foto-universidad">
+        <img src="imagenes/universidad-telematica.png" alt="Mi etapa universitaria en Ingeniería en Telemática">
+    </div>
+</div>
+            <p>
+                Y al principio... no me gustaba nadita. 😅
+            </p>
+
+            <p>
+                Pero con el paso del tiempo las clases comenzaron a ponerse interesantes.
+                Empezaron a despertar esa curiosidad que siempre he tenido y ya no quería
+                simplemente terminar una clase: <strong>quería entender más.</strong>
+            </p>
+<div class="historia-fila proyecto-brazo">
+    <div class="historia-texto">
+            <p>
+                Uno de los momentos que más cambió mi forma de ver la carrera fue
+                desarrollar mi primer proyecto: <strong>un prototipo de brazo
+                hidráulico.</strong>
+            </p>
+
+            <p>
+                Fue uno de los proyectos que más llamó la atención y ver que algo que
+                habíamos construido funcionaba y gustaba a otras personas me motivó
+                muchísimo.
+            </p>
+    </div>
+
+    <div class="historia-foto foto-brazo">
+        <img src="imagenes/brazo-exposicion.png" alt="Exposición de mi proyecto de brazo hidráulico">
+    </div>
+</div>
+            <p>
+                También cambió completamente mi relación con la programación. Antes veía
+                una computadora llena de código y pensaba:
+                <strong>“Yo nunca voy a aprender eso.”</strong>
+            </p>
+
+            <p>
+                Hoy pienso completamente diferente. La programación me parece muy
+                interesante y disfruto descubrir todo lo que puedo llegar a construir
+                con ella.
+            </p>
+
+            <p>
+                Y hay una coincidencia de mi historia que me gusta mucho: aquel niño que
+                disfrutaba acompañando a su abuelo a una finca ganadera hoy participa
+                en el desarrollo de un proyecto tecnológico para el
+                <strong>monitoreo y localización de ganado mediante GPS, ESP32,
+                LoRa y una aplicación móvil.</strong>
+            </p>
+
+            <p>
+                Definitivamente, no me arrepiento de haber entrado a la universidad.
+                Si hay algo que cambiaría, sería haber comenzado antes.
+            </p>
+        </div>
+
+        <div class="historia-bloque">
+            <h3>🏍️ Quién soy fuera de la universidad</h3>
+
+            <p>
+                La tecnología es solamente una parte de mí.
+            </p>
+
+            <p>
+                También me encantan las <strong>motos, los carros, el gimnasio,
+                salir a trotar, los videojuegos y aprender cosas nuevas.</strong>
+            </p>
+<div class="historia-fila">
+    <div class="historia-texto">
+            <p>
+                Tengo una afición especial por las motos. Me gusta mucho la
+                <strong>Honda Tornado</strong> y una de las motos que sueño tener
+                algún día es una <strong>Yamaha Yz 125</strong>. También me llama
+                bastante la atención la mecánica, tanto de motos como de carros.
+            </p>
+    </div>
+
+    <div class="historia-foto foto-motos">
+        <img src="imagenes/motos-pasion.png" alt="Una de mis pasiones: las motos">
+    </div>
+</div>
+            <p>
+                En cuanto a carros, me gustan especialmente los todoterreno, aunque
+                también disfruto los vehículos elegantes y familiares.
+            </p>
+    <div class="historia-fila historia-fila-inversa">
+    <div class="historia-texto">
+   <p>
+                Si me dieran varios días completamente libres, probablemente una de
+                mis primeras decisiones sería regresar a Huaquillas.
+            </p>
+
+            <p>
+                Me gustaría pasar esos días saliendo en moto, ir al gimnasio por las
+                noches, jugar videojuegos con mis primos, compartir con mis amigos y
+                dedicar uno o dos días a acompañar nuevamente a mi abuelo en el campo.
+            </p>
+
+            <p>
+                Pero también disfruto algo mucho más sencillo:
+                <strong>estar en casa con mi familia.</strong>
+            </p>
+    </div>
+
+    <div class="historia-foto foto-paseo-moto">
+        <img src="imagenes/paseo-moto.png" alt="Uno de mis paseos en moto">
+    </div>
+</div>
+<div class="historia-fila">
+    <div class="historia-texto">
+            <p>
+                Compartir con mi abuelita, conversar, descansar y pasar tiempo con
+                <strong>Zoe, mi primita más pequeña</strong>, que ocupa un lugar muy
+                especial para mí.
+            </p>
+
+            <p>
+                Porque por muchas cosas que quiera conseguir en el futuro, volver a
+                Huaquillas siempre significa volver a mi familia, mis amigos y mis raíces.
+            </p>
+
+        </div>
+<div class="historia-foto foto-zoe">
+        <img src="imagenes/zoe.png" alt="Un momento especial con Zoe">
+    </div>
+</div>
+
+</div>
+        <div class="historia-bloque">
+            <h3>❤️ Las personas detrás de mi progreso</h3>
+
+            <p>
+                Todo este camino tampoco lo he recorrido solo.
+            </p>
+
+            <p>
+                Estoy profundamente agradecido con todas las personas que, de una u otra
+                manera, me han motivado, apoyado y han confiado en mí durante las
+                diferentes etapas de mi vida.
+            </p>
+<div class="historia-fila">
+    <div class="historia-texto">
+            <p>
+                Pero especialmente quiero agradecer a
+                <strong>mi papá y a mi mamá.</strong>
+            </p>
+
+            <p>
+                Gran parte de lo que estoy consiguiendo hoy también es gracias a ellos.
+                Su apoyo ha sido fundamental para que pueda continuar estudiando,
+                avanzar en mi carrera y seguir construyendo poco a poco mi futuro.
+            </p>
+    </div>
+
+    <div class="historia-foto foto-familia">
+        <img src="imagenes/familia.png" alt="Mi familia, una parte fundamental de mi progreso">
+    </div>
+</div>
+            <p>
+                Sé que todavía me falta muchísimo por recorrer y que apenas estoy
+                comenzando, pero también sé que
+                <strong>sin ellos gran parte de este progreso no sería posible.</strong>
+            </p>
+<div class="historia-fila historia-fila-inversa">
+    <div class="historia-texto">
+            <p>
+                Por eso, cada logro que consiga en este camino no será solamente mío.
+                También tendrá una parte de mis padres, mi familia y de todas aquellas
+                personas que estuvieron conmigo, me ayudaron y me motivaron a continuar.
+            </p>
+
+            <p>
+                Detrás de cada proyecto, cada semestre superado y cada cosa nueva que
+                aprendo, existen personas que también forman parte del camino que me
+                está llevando hacia donde quiero llegar.
+            </p>
+                </div>
+
+    <div class="historia-foto foto-familia-2">
+        <img src="imagenes/familia-2.png" alt="Mi familia, parte importante de mi camino">
+    </div>
+</div>
+        </div>
+
+        <div class="historia-bloque">
+            <h3>🚀 Lo que quiero construir</h3>
+
+            <p>
+                Cuando pienso en cómo me gustaría verme dentro de cinco o diez años,
+                hay algo que tengo muy claro:
+                <strong>quiero verme convertido en Ingeniero en Telemática.</strong>
+            </p>
+
+            <p>
+                Quiero seguir aprendiendo, adquirir experiencia y crecer profesionalmente.
+                También me gustaría que mi profesión me diera la oportunidad de salir
+                de Ecuador, conocer otras partes del mundo y quizá desarrollar una etapa
+                de mi vida en países como
+                <strong>España, Suiza o Estados Unidos.</strong>
+            </p>
+
+            <p>
+                Pero mis metas no son solamente profesionales. También me gustaría
+                <strong>formar una familia, tener mi propia casa y construir una vida
+                estable.</strong>
+            </p>
+
+            <p>
+                No espero conseguirlo todo inmediatamente. Prefiero avanzar poco a poco,
+                aprender de cada etapa y continuar progresando.
+            </p>
+
+            <p>
+                Mi vida tomó un rumbo muy diferente al que imaginaba cuando quería ser
+                policía o militar. Hubo momentos en los que no sabía qué iba a hacer y
+                otros en los que pensé que ciertas cosas simplemente no eran para mí.
+            </p>
+
+            <p>
+                Hoy todavía estoy empezando. Todavía tengo muchísimo que aprender,
+                proyectos por construir, errores que cometer y objetivos que alcanzar.
+                Pero ahora sí sé hacia dónde quiero seguir caminando.
+            </p>
+        </div>
+
+        <blockquote class="frase-historia">
+            “Mi camino no empezó como lo había planeado, pero terminó llevándome hacia
+            algo que hoy realmente quiero construir.”
+        </blockquote>
+
+    </div>
+</div>
+<!-- FIN VENTANA: CONOCE MÁS DE MÍ -->
+<section id="sobre-mi" class="sobre-mi">
+
+    <div class="imagen-sobre-mi">
+        <img src="imagenes/sobre-mi.jpeg" alt="Foto de Deery Encarnación">
+    </div>
+
+    <div class="contenido-sobre-mi">
+
+        <p class="etiqueta-seccion">Conoce mi historia</p>
+
+        <h2>Sobre mí</h2>
+
+<p>
+    Soy una persona curiosa, perseverante y con ganas de seguir aprendiendo.
+    Me gusta entender cómo funcionan las cosas, experimentar con nuevas ideas
+    y enfrentar retos que me permitan descubrir de lo que soy capaz.
+</p>
+
+<p>
+    Disfruto combinar mi lado creativo con lo práctico. Fuera de lo académico,
+    también tengo intereses que forman parte de quién soy y de mi manera de ver
+    el mundo. Para mí, cada experiencia es una oportunidad para aprender,
+    mejorar y construir mi propio camino.
+</p>
+  <div class="datos-sobre-mi">
+    <div>
+        <span>Me define</span>
+        <strong>Curiosidad y perseverancia</strong>
+    </div>
+
+    <div>
+        <span>Me inspira</span>
+        <strong>Crear, aprender y descubrir</strong>
+    </div>
+
+    <div>
+        <span>Mi enfoque</span>
+        <strong>Seguir creciendo y superándome</strong>
+    </div>
+</div>
+
+    </div>
+
+</section>
+<section id="proyectos" class="proyectos">
+
+    <div class="encabezado-seccion">
+        <p>Lo que estoy construyendo</p>
+        <h2>Mis proyectos</h2>
+    </div>
+
+    <div class="contenedor-proyectos">
+
+        <article class="tarjeta-proyecto">
+      <img src="Imagen5.jpeg" alt="Brazo hidráulico">
+            <div class="contenido-proyecto">
+                <span>Proyecto universitario</span>
+                <h3>Brazo hidráulico</h3>
+
+                <p>
+                    Prototipo desarrollado con jeringas y mangueras para demostrar
+                    el principio de Pascal y el funcionamiento de sistemas hidráulicos.
+                </p>
+
+              <a href="#proyecto-brazo">Ver proyecto</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto">
+            <img src="imagenes/collar-lora.png" alt="Diseño del collar GPS LoRa para monitoreo de ganado">
+
+            <div class="contenido-proyecto">
+                <span>IoT y conectividad</span>
+                <h3>Monitoreo de ganado con LoRa</h3>
+<p>
+    Proyecto en desarrollo para el monitoreo y localización de ganado
+    mediante GPS, ESP32, tecnología LoRa y una aplicación móvil.
+</p>
+               
+
+               <a href="#proyectos">En desarrollo</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-proyecto">
+            <img src="imagenes/paginaweb.png" alt="Página web personal Deery_Yz">
+
+            <div class="contenido-proyecto">
+                <span>Desarrollo web</span>
+                <h3>PaginaWeb Deery_Yz</h3>
+
+ <p>
+    Sitio web personal desarrollado desde cero con HTML,
+    CSS y JavaScript, enfocado en diseño responsivo,
+    interactividad y presentación profesional.
+</p>
+
+                <a href="#inicio">Ver página</a>
+            </div>
+        </article>
+
+    </div>
+</section>
+<section id="habilidades" class="habilidades">
+
+    <div class="encabezado-seccion">
+        <p>Mis conocimientos</p>
+        <h2>Habilidades</h2>
+    </div>
+
+    <div class="contenedor-habilidades">
+
+        <div class="habilidad">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML</h3>
+            <p>Estructura y desarrollo de páginas web.</p>
+            <span class="nivel-habilidad">Buen manejo</span>
+        </div>
+
+        <div class="habilidad">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <p>Diseño, estilos y adaptación responsive de páginas web.</p>
+            <span class="nivel-habilidad">Buen manejo</span>
+        </div>
+
+        <div class="habilidad">
+            <i class="fa-brands fa-js"></i>
+            <h3>JavaScript</h3>
+            <p>Interactividad y funcionalidades dinámicas para páginas web.</p>
+            <span class="nivel-habilidad">En desarrollo</span>
+        </div>
+
+        <div class="habilidad">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>ESP32 / Arduino</h3>
+            <p>Programación de microcontroladores, sensores y prototipos electrónicos.</p>
+            <span class="nivel-habilidad">Experiencia en proyectos</span>
+        </div>
+
+        <div class="habilidad">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Flutter</h3>
+            <p>Aprendizaje y desarrollo inicial de aplicaciones móviles.</p>
+            <span class="nivel-habilidad">En aprendizaje</span>
+        </div>
+
+    </div>
+
+</section>
+<section id="trayectoria" class="trayectoria">
+
+    <div class="encabezado-seccion">
+        <p>Mi evolución</p>
+        <h2>Mi trayectoria</h2>
+    </div>
+
+    <div class="linea-tiempo">
+
+        <div class="evento">
+            <span class="anio">2025</span>
+            <div class="contenido-evento">
+              <h3>Inicio de una nueva etapa</h3>
+<p>
+    Comencé mi formación universitaria descubriendo nuevas áreas de la tecnología
+    y desarrollando una forma más práctica de aprender, experimentar y resolver problemas.
+</p> 
+            </div>
+        </div>
+
+        <div class="evento">
+            <span class="anio">2026</span>
+            <div class="contenido-evento">
+               <h3>Primer proyecto universitario</h3>
+<p>
+    Pasé de estudiar conceptos en clase a construir y presentar una solución funcional,
+    ganando experiencia en trabajo en equipo, planificación y sustentación de proyectos.
+</p>
+            </div>
+        </div>
+
+        <div class="evento">
+            <span class="anio">2026</span>
+            <div class="contenido-evento">
+                <h3>Nuevos retos tecnológicos</h3>
+<p>
+    Empecé a participar en proyectos más completos, integrando sensores, conectividad
+    y desarrollo de aplicaciones mientras amplío mis conocimientos técnicos.
+</p>
+            </div>
+        </div>
+
+        <div class="evento">
+            <span class="anio">2026</span>
+            <div class="contenido-evento">
+             <h3>Construcción de mi identidad digital</h3>
+<p>
+    Inicié el desarrollo de mi propia página web como un espacio para organizar
+    mi evolución, mostrar lo que voy creando y fortalecer mi presencia profesional.
+</p>   
+            </div>
+        </div>
+
+        <div class="evento evento-futuro">
+            <span class="anio">Futuro</span>
+            <div class="contenido-evento">
+             <h3>Seguir creciendo</h3>
+<p>
+    Continuar aprendiendo, participar en nuevos proyectos y convertir cada experiencia
+    en una oportunidad para avanzar profesional y personalmente.
+</p>   
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section id="proyecto-brazo" class="detalle-proyecto">
+    <div class="detalle-proyecto-contenido">
+
+        <div class="detalle-proyecto-texto">
+            <span>Proyecto universitario</span>
+            <h2>Brazo hidráulico</h2>
+
+            <p>
+                Prototipo desarrollado con jeringas y mangueras para demostrar
+                el principio de Pascal y el funcionamiento de un sistema hidráulico.
+                El movimiento del brazo se controla mediante la presión ejercida
+                sobre el fluido contenido en las jeringas.
+            </p>
+
+            <p>
+                El proyecto permitió aplicar conocimientos de física, mecánica
+                de fluidos y diseño, combinando teoría y práctica mediante la
+                construcción y sustentación de un prototipo funcional.
+            </p>
+            <div class="tecnologias-brazo">
+    <span>Principio de Pascal</span>
+    <span>Hidráulica</span>
+    <span>Mecánica de fluidos</span>
+    <span>Prototipado</span>
+</div>
+        </div>
+
+        <div class="galeria-brazo">
+            <img src="Imagen5.jpeg" alt="Brazo hidráulico completo">
+            <img src="Imagen1.jpeg" alt="Presentación del brazo hidráulico">
+            <img src="Imagen2.jpeg" alt="Exposición del proyecto">
+            <img src="Imagen4.jpeg" alt="Ingeniería Telemática">
+            <img src="Imagen3.jpeg" alt="Demostración del brazo hidráulico">
+            <img src="Imagen6.jpeg" alt="Sustentación del proyecto">
+        </div>
+
+    </div>
+</section>
+<section class="estadisticas">
+
+    <div class="estadistica">
+        <h2 class="contador" data-numero="3">0</h2>
+        <p>Proyectos</p>
+    </div>
+
+    <div class="estadistica">
+        <h2 class="contador" data-numero="2">0</h2>
+        <p>Semestres</p>
+    </div>
+
+    <div class="estadistica">
+        <h2 class="contador" data-numero="100">0</h2>
+        <p>Compromiso</p>
+    </div>
+
+    <div class="estadistica">
+        <h2>∞</h2>
+        <p>Aprendizaje</p>
+    </div>
+
+</section>
+<section id="logros" class="logros">
+
+    <div class="encabezado-seccion">
+        <p>Avances importantes</p>
+        <h2>Mis logros</h2>
+    </div>
+
+    <div class="contenedor-logros">
+
+        <article class="tarjeta-logro">
+            <i class="fa-solid fa-gears"></i>
+          <h3>Primera experiencia de exposición</h3>
+<p>
+    Presenté junto a mi equipo un proyecto tecnológico,
+    fortaleciendo mi comunicación, trabajo en equipo y
+    capacidad para explicar una solución desarrollada.
+</p>
+        </article>
+
+        <article class="tarjeta-logro">
+            <i class="fa-solid fa-tower-broadcast"></i>
+           <h3>Trabajo en proyectos en desarrollo</h3>
+<p>
+    He comenzado a participar en proyectos que integran
+    sensores, conectividad y desarrollo de aplicaciones,
+    ampliando progresivamente mis conocimientos técnicos.
+</p>
+        </article>
+
+        <article class="tarjeta-logro">
+            <i class="fa-solid fa-code"></i>
+            <h3>Primera página web personal</h3>
+<p>
+    Diseñé y desarrollé mi primera página web personal,
+    aplicando HTML, CSS y JavaScript mientras mejoraba
+    mis conocimientos de desarrollo web.
+</p>
+        </article>
+
+        <article class="tarjeta-logro">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          <h3>Crecimiento técnico</h3>
+<p>
+    He ampliado mis conocimientos más allá del aula,
+    explorando herramientas de programación, electrónica
+    y desarrollo para fortalecer mi formación profesional.
+</p> 
+        </article>
+
+    </div>
+
+</section>
+<section id="pasiones" class="pasiones">
+
+    <div class="encabezado-seccion">
+        <p>Lo que disfruto</p>
+        <h2>Mis pasiones</h2>
+    </div>
+
+    <div class="contenedor-pasiones">
+
+       <div class="tarjeta-pasion">
+    <img src="imagenes/moto1.jpg" alt="Motos">
+    <div class="contenido-pasion">
+        <h3>Motos</h3>
+        <p>Velocidad, mecánica y la libertad de disfrutar cada recorrido.</p>
+    </div>
+</div>
+
+
+     <div class="tarjeta-pasion">
+    <img src="imagenes/carro1.jpg" alt="Carros">
+    <div class="contenido-pasion">
+        <h3>Carros</h3>
+        <p>Diseño, potencia y el mundo automotriz son parte de mis grandes intereses.</p>
+    </div>
+</div>
+
+      <div class="tarjeta-pasion">
+    <img src="imagenes/proyecto1.jpeg" alt="Tecnología">
+    <div class="contenido-pasion">
+        <h3>Tecnología</h3>
+        <p>Me inspira descubrir cómo funciona la tecnología y explorar nuevas formas de crear con ella.</p>
+    </div>
+</div>
+
+    </div>
+
+</section>
+
+<section id="opinion" class="opinion">
+
+    <div class="encabezado-seccion">
+        <p>Tu opinión cuenta</p>
+        <h2>¿Qué te pareció mi página?</h2>
+    </div>
+
+    <div class="contenedor-opinion">
+
+        <p class="texto-opinion">
+            Tu opinión me ayuda a seguir mejorando. Déjame una calificación
+            y cuéntame qué te pareció mi página.
+        </p>
+
+        <form class="formulario-opinion"
+      action="https://formspree.io/f/mdenkddp"
+      method="POST">
+
+            <div class="estrellas">
+                <span data-valor="1">★</span>
+                <span data-valor="2">★</span>
+                <span data-valor="3">★</span>
+                <span data-valor="4">★</span>
+                <span data-valor="5">★</span>
+            </div>
+
+            <input type="hidden" id="calificacion" name="calificacion">
+
+            <input type="text" name="nombre" placeholder="Tu nombre (opcional)">
+
+            <textarea name="comentario"
+                placeholder="Cuéntame qué te pareció mi página..."
+                required></textarea>
+
+            <button type="submit">Enviar opinión</button>
+
+        </form>
+
+    </div>
+
+</section>
+<section id="contacto" class="contacto">
+
+    <div class="encabezado-seccion">
+        <p>Conectemos</p>
+<h2>Contacto</h2>
+    </div>
+
+    <div class="contenedor-contacto">
+
+        <div class="informacion-contacto">
+            <h3>¿Tienes una idea o proyecto?</h3>
+
+         <p>
+    Si quieres conversar, compartir una idea o simplemente conectar conmigo,
+    puedes encontrarme en mis redes sociales o enviarme un mensaje.
+</p>  
+
+            <div class="datos-contacto">
+                <a href="mailto:deeryencarnacion2018@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    deeryencarnacion2018@gmail.com
+                </a>
+
+                <a href="https://wa.me/593993676534" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    WhatsApp
+                </a>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Ecuador
+                </p>
+            </div>
+        </div>
+
+        <form class="formulario-contacto"
+      action="https://formspree.io/f/mdenkddp"
+      method="POST">
+<input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+
+<input id="correo" name="email" type="email" placeholder="Tu correo" required>
+
+<input id="asunto" name="asunto" type="text" placeholder="Asunto" required>
+
+<textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" rows="6" required></textarea>
+      
+
+            <button type="submit">Enviar mensaje</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+    </main>
+    <footer class="footer">
+
+    <h2>Deery_<span>Yz</span></h2>
+
+   <p>
+    Gracias por visitar mi página. Este espacio seguirá creciendo
+    junto conmigo, mis experiencias y todo lo que venga después.
+</p>
+
+    <div class="footer-redes">
+
+        <a href="https://www.facebook.com/share/1Bin85ULEK/?mibextid=wwXIfr" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/deery_encarnacion" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@deeryencarnacion" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Deery_Yz • Todos los derechos reservados.
+    </p>
+
+</footer>
+<a href="#inicio" class="boton-arriba" aria-label="Volver al inicio">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+<div class="visor-imagen" id="visorImagen">
+    <button class="cerrar-visor" id="cerrarVisor">&times;</button>
+    <img id="imagenAmpliada" src="" alt="Imagen ampliada">
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
